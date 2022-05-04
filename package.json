@@ -4,7 +4,7 @@
   "description": "Refactorización, Practica 1 de la semana 4  LaunchX",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./node_modules/.bin/jest"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/GrisGGG/FizzBuzz/issues"
   },
-  "homepage": "https://github.com/GrisGGG/FizzBuzz#readme"
+  "homepage": "https://github.com/GrisGGG/FizzBuzz#readme",
+  "devDependencies": {
+    "jest": "^28.0.3"
+  }
 }

@@ -1,19 +1,18 @@
-const fs = require("fs");
+const fs = require("fs"); // fs (files ystem)es un modulo de Nodejs, que ayuda al acceso e interaccipon con archivos. 
 
 // Part 1 Read json file ===========================
-const rawdata = fs.readFileSync("explorers.json");
-const explorers = JSON.parse(rawdata);
+const rawdata = fs.readFileSync("explorers.json"); // readFileSync: interfaz que lee el archivo de manera sincrona (Node se detiene hasta que se termina de leer el archivo) y devuelve 
+const explorers = JSON.parse(rawdata); // JSON.parse: pasa el texto analizado a JSON
+// explorers; es una lista de explorers del archivo JSON
 
 // Part 2: Get the quantity of explorers names in node
-const explorersInNode = explorers.filter((explorer) => explorer.mission == "node");
+const explorersInNode = explorers.filter((explorer) => explorer.mission == "node"); // Filtra a cada objeto por el valor en la propiedad mission y devuelve solo los que sean igual a node
 //console.log(explorersInNode.length)
 
 // Part4: Get the explorer's usernames in Node
 const explorersInNodeToGetUsernames = explorers.filter((explorer) => explorer.mission == "node");
 const usernamesInNode = explorersInNodeToGetUsernames.map((explorer) => explorer.githubUsername);
 //console.log(usernamesInNode)
-
-// DEAD CODE: Part 5,6,7, please remove this and go to Part 8!
 
 // Part 5: Get a new list of explorers in node, if the score numbers is divisible by 3, I need a new propery called trick, and the value assigned is FIZZ, if not the value should be the score itself.
 // Score: 3, Trick: FIZZ.
@@ -31,9 +30,8 @@ const assignFizzTrick = function(explorer){
 };
 
 const explorersInNodeAndFizzTrick = explorersInNode.map((explorer) => assignFizzTrick(explorer));
-
 // Part 6: Get a new list of explorers in node if the score number is divisible by 5, we need to set a new property called trick and set the value BUZZ, if not this value should be just the score
-//
+
 const assignBuzzTrick = function(explorer){
     if(explorer.score%5 === 0){
         explorer.trick = "BUZZ";
