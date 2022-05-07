@@ -15,4 +15,4 @@ describe("Test de la clase ExplorerService", () =>{
         const explorersOfMissionNode = ExplorerService.getAmountOfExplorersByMission(explorers, "node");
         expect(explorersOfMissionNode).toBe(10);
     });
-})
+});

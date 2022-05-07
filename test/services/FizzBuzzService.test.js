@@ -22,4 +22,4 @@ describe("Test de Clase FizzbuzzService", () => {
         const validation = FizzbuzzService.applyValidationInExplorer(explorer15);
         expect(validation.trick).toBe("FIZZBUZZ");
     });
-})
+});
