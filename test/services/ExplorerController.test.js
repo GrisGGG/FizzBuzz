@@ -13,4 +13,4 @@ describe("Tests para ExplorerController", () => {
         const validacion1 = ExplorerController.getExplorersAmonutByMission("node");
         expect(validacion1).toBe(10);
     });
-})
+});
