@@ -4,6 +4,7 @@
   "description": "Refactorización, Practica 1 de la semana 4  LaunchX",
   "main": "index.js",
   "scripts": {
+    "server": "node ./lib/server.js",
     "test": "node ./node_modules/.bin/jest",
     "linter": "node ./node_modules/eslint/bin/eslint.js .",
     "linter-fix": "node ./node_modules/eslint/bin/eslint.js . --fix"
@@ -23,6 +24,7 @@
     "jest": "^26.0.0"
   },
   "dependencies": {
+    "express": "^4.18.1",
     "npm": "^8.9.0"
   }
 }
